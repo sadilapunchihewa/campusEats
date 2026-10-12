@@ -49,16 +49,17 @@ function OrderPage() {
 
   if (done) {
     return (
-      <div>
-        <h1>Order Successful</h1>
-        <p>Thanks, {form.name}! Order received.</p>
+      <div className="form-page">
+        <h1>Details saved</h1>
+        <p>Thanks, {form.name}! Your details have been captured for this demo. No order has been sent to the kitchen.</p>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="form-page">
       <h1>Place an Order</h1>
+      <p>Fill in your details below. This demo form does not send an order to the kitchen.</p>
 
       <form onSubmit={handleSubmit}>
         <div>

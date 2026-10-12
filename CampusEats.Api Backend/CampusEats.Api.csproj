@@ -1,9 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web" TreatAsLocalProperty="EnableProjectDataOnBuild">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Dev Kit's project-data task requires .NET 10; keep CLI builds usable on .NET 8. -->
+    <EnableProjectDataOnBuild>false</EnableProjectDataOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

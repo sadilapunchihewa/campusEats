@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CampusEats API (.NET 8 CLI build)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "CampusEats: build backend",
+      "program": "${workspaceFolder}/CampusEats.Api Backend/bin/Debug/net8.0/CampusEats.Api.dll",
+      "cwd": "${workspaceFolder}/CampusEats.Api Backend",
+      "console": "integratedTerminal",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5204",
+        "Cors__AllowedOrigins__0": "http://localhost:5173",
+        "Cors__AllowedOrigins__1": "http://localhost:4173"
+      }
+    }
+  ]
+}
