@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: campuseats-api
+    runtime: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./CampusEats.Api Backend/Dockerfile
+    dockerContext: ./CampusEats.Api Backend
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Cors__AllowedOrigins__0
+        sync: false
